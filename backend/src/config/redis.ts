@@ -1,12 +1,16 @@
 import Redis from 'ioredis';
 import 'dotenv/config';
 
-const redisHost = process.env.REDIS_HOST || 'localhost';
-const redisPort = parseInt(process.env.REDIS_PORT || '6379', 10);
+const getRedisUrl = () => {
+  if (process.env.REDIS_URL) {
+    return process.env.REDIS_URL;
+  }
+  const host = process.env.REDIS_HOST || 'localhost';
+  const port = process.env.REDIS_PORT || '6379';
+  return `redis://${host}:${port}`;
+};
 
-const redis = new Redis({
-  host: redisHost,
-  port: redisPort,
+const redis = new Redis(getRedisUrl(), {
   maxRetriesPerRequest: null
 });
 
