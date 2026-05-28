@@ -150,7 +150,7 @@ function ResultContent() {
     try {
       const doc = new jsPDF();
       let yPos = 20;
-      const answers = result.result_answers?.answers || [];
+      const answers = result.result_answers || [];
 
       doc.setFontSize(20);
       doc.text('Answer Key', 105, yPos, { align: 'center' });
