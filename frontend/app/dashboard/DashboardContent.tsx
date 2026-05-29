@@ -9,6 +9,8 @@ import { Plus, FileText, Calendar, Clock, Loader2, Trash2, Eye } from 'lucide-re
 import { getToken, getUser } from '@/lib/auth';
 import { deleteAssignment as deleteAssignmentAPI } from '@/lib/api';
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+
 interface Assignment {
   _id: string;
   title: string;
@@ -33,7 +35,7 @@ export default function DashboardContent() {
       const token = getToken();
       console.log('Fetching assignments with token:', token ? 'present' : 'missing');
 
-      const response = await fetch('http://localhost:3001/api/assignments/myassignments', {
+      const response = await fetch(`${API_BASE_URL}/assignments/myassignments`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
