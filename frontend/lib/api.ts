@@ -69,7 +69,7 @@ export const getAssignmentResult = async (id: string) => {
 };
 
 export const deleteAssignment = async (id: string) => {
-  const response = await fetch(`${API_BASE_URL}/api/assignments/${id}`, {
+  const response = await fetch(`${API_BASE_URL}/assignments/${id}`, {
     method: 'DELETE',
     headers: getHeaders(),
   });
