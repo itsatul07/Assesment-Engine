@@ -91,8 +91,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Backend - Render
 
-1. Create a Web Service on [Render](https://render.com)
-2. Connect your GitHub repository
+1. Created a Web Service on [Render](https://render.com)
+2. Connected my GitHub repository
 3. Set root directory to `backend`
 4. Configure:
    - **Build Command**: `npm install --include=dev && npm run build`
@@ -106,8 +106,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Frontend - Vercel
 
-1. Create a new project on [Vercel](https://vercel.com)
-2. Import your GitHub repository
+1. Created a new project on [Vercel](https://vercel.com)
+2. Imported my GitHub repository
 3. Set root directory to `frontend`
 4. Add environment variable:
    - `NEXT_PUBLIC_API_URL` = your Render backend URL (e.g., `https://your-backend.onrender.com/api`)
