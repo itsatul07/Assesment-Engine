@@ -51,7 +51,7 @@ export default function DashboardContent() {
       }
 
       const data = await response.json();
-      console.log('API Response:', JSON.stringify(data).substring(0, 500));
+      //console.log('API Response:', JSON.stringify(data).substring(0, 500));
 
       if (data.success && data.data) {
         setAssignments(data.data);
