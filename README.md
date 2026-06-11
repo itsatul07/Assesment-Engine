@@ -1,4 +1,4 @@
-# Veda AI - Assessment Generator
+#Assessment Generator
 
 An AI-powered assessment generation platform that helps teachers create question papers automatically using AI.
 
